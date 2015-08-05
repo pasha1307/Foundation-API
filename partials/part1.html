@@ -1,0 +1,31 @@
+div class="ui segment" ui-view></div>
+
+    <!--
+<div class="ui right floated column">
+<div class="ui small tag label">
+<div class="ui blue small statistic">
+<div class="value">{{selectedRecords.length}}</div>
+<div class="label">Records</div>
+</div>
+</div>
+</div>
+-->
+
+
+
+<div>
+  <h2>Search Results</h2>
+<div class="ui segment right">
+    <a class="ui teal left ribbon label">N= {{selectedItems.length}}</a>
+    <div class="ui selection list">
+      <div class="item" ng-repeat="item in selectedItems =(records | filter: q)">
+        <a ng-href="#/home/{{records.indexOf(item)}}">
+          <div class="content">
+          <div class="header">{{item.name}}</div>
+          <div class="description">Correspondence begun in: {{item.years}}</div>
+          </div></a>
+      </div>
+    </div>
+  </div> <!--list-->
+
+</div>

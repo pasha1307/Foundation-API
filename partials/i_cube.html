@@ -1,0 +1,37 @@
+<div class="ui cube shape" id="shape">
+  <div class="sides">
+    <div class="side one" id="side_1">
+      <div class="ui bottom attached label"><i>Albert Einstein</i></div>
+      </div>
+    <div class="side two ui segment" id="side_2">
+      <div class="segment raised">
+        <div class="ui bottom attached label"><i>Herbert Hoover</i></div>
+      </div>
+    </div>
+    <div class="side active three ui segment" id="side_3">
+      <div class="ui bottom attached label"><i>Alexander Kerensky</i></div>
+    </div>
+
+    <div class="side four ui segment" id="side_4">
+      <div class="ui bottom attached transoarent label"><i>Igor Sikorsky</i></div>
+    </div>
+    <div class="side five ui segment" id="side_5">
+      <div class="ui bottom attached label"><i>Arnold Toinbee</i></div>
+    </div>
+    <div class="side six ui segment" id="side_6">
+      <div class="ui bottom attached label"><i>Sergei Koussevitsky</i></div>
+    </div>
+  </div> <!--sides-->
+</div> <!--shape-->
+<script>
+$('.ui.shape').hover(function(){
+  $('.ui.shape')
+    .shape('flip down',1000)
+    .shape('flip down', 3000)
+    .shape('flip right',500)
+    .shape('flip right',4000)
+    .shape('flip up',4000)
+    .end()
+  ;
+});
+</script>

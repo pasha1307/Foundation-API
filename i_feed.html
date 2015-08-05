@@ -1,0 +1,131 @@
+
+          <div class="ui internally divided padded grid">
+              <div class="row">
+
+              <div class="six wide column">
+
+                <div class="ui inverted segment">
+
+                  <div class="ui header">Data Entry</div>
+
+                </div>
+
+                <div class="ui form">
+
+                  <form ng-submit>
+
+                    <div class="field">
+
+                      <label>Title</label>
+
+                      <input type="text" ng-model="title">
+
+                    </div>
+
+                    <div class="field">
+
+                      <label>Category</label>
+
+                      <input type="text" ng-model="category">
+
+                    </div>
+
+                    <div class="field">
+
+                      <label>Location</label>
+
+                      <input type="text" ng-model="location">
+
+                    </div>
+
+                    <div class="field">
+
+                      <label>Notes</label>
+
+                      <input type="text" ng-model="notes">
+
+                    </div>
+
+                    <div class="large basic animated fade ui button" ng-click="addItem()">
+
+                      <div class="visible content">Submit</div>
+
+                      <div class="hidden content">New Record</div>
+
+                    </div>
+
+                  </form>
+
+                </div>
+
+              <div class="ui divider"></div>
+
+                <div class="ui center aligned segment">
+
+                  <div class="ui pointing label">
+
+                    <div class="ui blue statistic">
+
+                      <div class="value">
+
+                        {{selected.length}}
+
+                      </div>
+
+                      <div class="label">
+
+                        Records
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+
+              </div>
+
+              <div class="ten wide column">
+
+                <div class="ui inverted segment">
+
+                  <div class="ui header">Home Collection Catalogue</div>
+
+                </div>
+
+                <div class="ui segment green">
+
+                  <div class="ui cards" ng-repeat="item in selected=(catalogue)">
+
+                    <div class="card">
+
+                      <div class="content">
+
+                        <div class="header">{{item.title}}</div>
+
+                        <div class="meta">{{item.category}} : {{item.location}}</div>
+
+                        <div class="description">
+
+                          {{item.notes}}
+
+                        </div>
+
+                        <a class="ui red corner label" ng-click="catalogue.$remove(item)"><i class="recycle icon"></i></a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            </div>

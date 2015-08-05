@@ -1,0 +1,67 @@
+<div class="ui vertical feature segment">
+  <!--    <div class="ui centered page grid">-->
+  <div class="sixteen wide column">
+    <div class="ui three column center aligned stackable grid">
+      <div class="column">
+
+          <div class="ui inverted segment" id="kubik">
+          <div class="ui hidden divider"></div>
+            <div ng-include="'partials/i_cube.html'"></div>
+            <div class="ui hidden divider"></div></div>
+
+
+      <div class="ui justified segment">
+        <div class="ui hidden divider"></div>
+        <div class="content">
+          <h2 class="ui header">Pitirim A. Sorokin Collection</h2>
+          <p>
+          The Pitirim A. Sorokin Collection came to the University of Saskatchewan in 1968. The collection contains Sorokin's entire library of more than 1,500 books, and numerous other materials, including his own books, translations of these in some 50 languages, and books and articles by such other eminent scholars as Arnold Toynbee with Sorokin's comments in the margins. Other contents include: original Sorokin authored manuscripts; books and articles including first drafts and final revisions; some 90 notebooks on his reading and thinking; books and articles about him and his theories; his personal correspondence; photographs and other memorabilia. Among other materials there is a unique archive of Harvard Research Center in Creative Altruism founded by Sorokin.
+        </p>
+        </div>
+        <div class="ui hidden divider"></div>
+
+
+    </div>
+      </div>
+    <div class="column">
+      <div class="ui raised blue segment">
+        <div class="ui icon header">
+          <i class="search icon"></i>
+          Correspondence with..
+        </div><br>
+        <p class="ui input focus">
+          <input type="text" placeholder="Search..." ng-model="q">
+        </p><br>
+      </div>
+
+       <div class="ui left aligned raised segment ">
+         <a class="ui red left ribbon label">N = {{selectedItem.length}}</a>
+        <div class="ui hidden divider"></div>
+          <div id="some">
+
+          <div ng-repeat="item in selectedItem=(saskatoon | filter: q)">
+            <a ng-href="#/home/{{selectedItem.indexOf(item)}}">
+            <p class="header">{{item.name}}</p>
+            </a>
+            <div class="ui divider"></div>
+          </div>
+          <p>
+          </p>
+        </div>
+            </div>
+      </div>
+    <div class="column">
+      <div class="ui raised red segment">
+        <div class="ui icon header">
+          <i class="info icon"></i>
+          Details
+        </div>
+        <div class="ui small header left aligned" ui-view></div>
+      </div>
+
+    </div>
+  </div>
+<!--</div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--ui-sref="myitem({id: item.id})"-->
